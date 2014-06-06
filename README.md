@@ -10,9 +10,9 @@ The jQuery does most of the work of wrapping elements in their divs and pulling 
 You'll need:
 
 1. jQuery
-2. FancyBox
+2. [FancyBox](http://fancyapps.com/fancybox/)
 
-*Note: FancyBox is free for non-commercial use. For use in commercial websites, you must pay a licence.*
+*Note: FancyBox is free for non-commercial use. For use in commercial websites, you must [pay a licence](http://sites.fastspring.com/fancyapps/product/store).*
 
 ##### Instructions
 
