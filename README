@@ -49,7 +49,7 @@ Example:
 
 <div class="popup" >
 <img src="img/limestone.jpg" />
-<p>Many of Montreal’s most famous buildings (Windsor Station, Notre-Dame Basilica, and the Redpath Museum) are constructed with a very distinct looking limestone commonly referred to as Montreal greystone. Formed millions of years ago near the surface on the eastern end of the island, it was the material of choice for the city’s early property developers.<br />
+<p>Many of Montreal's most famous buildings (Windsor Station, Notre-Dame Basilica, and the Redpath Museum) are constructed with a very distinct looking limestone commonly referred to as Montreal greystone. Formed millions of years ago near the surface on the eastern end of the island, it was the material of choice for the cityï¿½s early property developers.<br />
 </p>
 </div>
 
