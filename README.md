@@ -2,13 +2,14 @@
 
 This template creates a grid of thumbnails with on-hover captions. When you click on a thumbnail, it brings up a lightbox-style popup with more information.
 
+[See it in action here](http://www.montrealgazette.com/news/interactives/couillard-cabinet/index.html).
+
 Just add `img` tags with descriptive file names and the desired caption as the `title` attribute.
 
 The jQuery does most of the work of wrapping elements in their divs and pulling caption info from the file names.
 
 ##### Dependencies
 You'll need:
-
 1. jQuery
 2. [FancyBox](http://fancyapps.com/fancybox/)
 
@@ -40,7 +41,7 @@ Example:
 <img src="img/tn/Limestone_bricks.jpg" title="What built Montreal"/>
 ```
 
-Close your `ul` and create a `div` with `id="burbs"`. In that div, create another div with `class="popup"`. This will be hidden in your page, and only appear in the FancyBox popup. You can add pretty much any content to it. 
+Close your `ul` and create a `div` with `id="blurbs"`. In that div, create another div with `class="popup"`. This will be hidden in your page, and only appear in the FancyBox popup. You can add pretty much any content to it. 
 
 Example:
 
@@ -56,6 +57,6 @@ Example:
 
 Make one of these popup divs for each of the thumbnails you created earlier. ** These divs must be in the same order as the thumbnails. Their id's will be the name of the thumbnail image files and this is how they'll be connected. **
 
-The jQuery script will also add the image file name as an `<h3>` element and the caption as `<h4>` beow it.
+The jQuery script will also add the image file name as an `<h3>` element and the caption as `<h4>` below it.
 
 That's all.
