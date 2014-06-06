@@ -27,7 +27,7 @@ First, add your dependencies in the head:
 
 ```
 
-In your body, create a `ul` with 'id="tiles"` and add each `img` tag. These will be your thumbnails.
+In your body, create a `ul` with `id="tiles"` and add each `img` tag. These will be your thumbnails.
 
 * The images must be jpegs and stored in a folder `img/tn`.
 * The optimal size is 185px x 185px, but this can be changed in the CSS.
