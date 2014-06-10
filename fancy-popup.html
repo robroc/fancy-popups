@@ -23,12 +23,21 @@
             var caption = thumbs[i].title;
 		    var imgname = $(thumbs[i]).attr('src');
             var imgID = imgname.substr(7, imgname.length).replace(".jpg","");
-            var imgtitle = imgID.replace("_", " ");
+            var imgtitle = imgID.replace(/_/g, " ");
           
 		    if (thumbs[i].src && thumbs[i].src.length > 0) 
 			   {
                 $(thumbs[i]).wrap('<li class="photos"><div class="wrapper"><a href="#' + imgID + '" id="' + imgID + '-pic" rel="popup"></a></div></li>');
-                $(thumbs[i]).after('<div class="caption">' + imgtitle + ":\n" + caption + '</div></a></div></li>');
+                
+                 if (thumbs[i].title && thumbs[i].title.length > 0) {
+                
+                    $(thumbs[i]).after('<div class="caption">' + imgtitle + ":\n" + caption + '</div></a></div></li>');
+                } else {
+                
+                    $(thumbs[i]).after('<div class="caption">' + imgtitle + "\n" + caption + '</div></a></div></li>');
+                
+                };
+               
                 
                 // Add IDs and <h3> titles to blurbs from img attributes
                 $(blurbs[i]).attr("id", imgID);
@@ -37,8 +46,7 @@
                };           
             
        };
-       
-		 	
+       		 	
 		 
 	  // Show photo caption on thumbnail hover
       $('.wrapper').mouseenter(function(){
@@ -73,51 +81,37 @@
   
 <ul id="tiles">
 
-	<img src="img/tn/Thumbnail_One.jpg" title="Caption for the first image"/>
-	<img src="img/tn/Thumbnail_Two.jpg" title="Caption for the second image" />
-	<img src="img/tn/Thumbnail_Three.jpg" title="Caption for the third image"/>
-	<img src="img/tn/Thumbnail_Four.jpg" title="Caption for the fourth image"/>
-	<img src="img/tn/Thumbnail_Five.jpg" title="Caption for the fifth image"/>
-	<img src="img/tn/Thumbnail_Six.jpg" title="Caption for the sixth image"/>
-
+	<img src="img/tn/A_cool_Ferrari.jpg" />
+	<img src="img/tn/A_perfect_croissant.jpg" title="Perfect for breakfast" />
+	<img src="img/tn/Another_cool_Ferrari.jpg" title="With a really cool caption"/>
+    <img src="img/tn/Some_tasty_donuts.jpg" />
+	
 </ul>   
 
 
 <div id="blurbs">
 
-	<div class="popup" >
-	<img src="img/bagel.jpg" />
+<div class="popup" >
+	<img src="img/A_cool_Ferrari.jpg" />
 	<p>Many of Montreal’s most famous buildings (Windsor Station, Notre-Dame Basilica, and the Redpath Museum) are constructed with a very distinct looking limestone commonly referred to as Montreal greystone. Formed millions of years ago near the surface on the eastern end of the island, it was the material of choice for the city’s early property developers.<br />
 	</p>
-	</div>
+</div>
 
 	<div class="popup" >
-	<img src="img/bixi.jpg" />
+	<img src="img/A_perfect_croissant.jpg" />
 	<p>When Jacques Cartier visited the Mohawk Iroquois village of Hochelaga (future site of Montreal), he wrote in his journal that the village was “encompassed by cornfields.” Most of the villagers’ activities revolved around the planting, care, harvesting and storing of corn. They were so apt at the growing corn that eventually male members of the tribe were able to spend more time training as warriors and hunters as opposed to working in the fields. The Iroquois nation thus became a powerful force during the 17th and 18th Centuries. This grindstone was found at Lanoraie, about 60 kilometres downriver from Montreal and was one of many tools used during corn production.</p>
 	</div>
 
 	<div class="popup" >
-	<img src="img/automobile.jpg" />
+	<img src="img/Another_cool_Ferrari.jpg" />
 	<p>Thériault will become the first female MNA to be public security minister. She is also the deputy premier. Thériault has been an MNA since 2002 and has been involved with several community organizations in the east end of Montreal. She has is a former minister of labour, social services and immigration.</p>
 	</div>
 
-	<div class="popup" >
-	<img src="img/bagel.jpg" />
-	<p>Fournier is a member of the old guard and has held several cabinet posts since 2003, including, municipal affairs, sports and recreation, education, revenue and Government House Leader. He was also interim leader of the party.</p>
-	<p> Fournier’s name was raised at the Charbonneau Commission last September when masonry contractor Paul Sauvé testified that a renovation project at the St. James United Church was on the verge of being scrapped in 2003 until he gave financial support to the provincial Liberals. Sauvé said he and members of his staff attended a Fournier fundraiser at Newtown on Crescent St. and donated money. Fournier has denied any wrongdoing and said Sauvé’s participation in the fundraising event “changed nothing” when it came to government funding of the church project. </p>
+    <div class="popup" >
+	<img src="img/Some_tasty_donuts.jpg" />
+	<p>Thériault will become the first female MNA to be public security minister. She is also the deputy premier. Thériault has been an MNA since 2002 and has been involved with several community organizations in the east end of Montreal. She has is a former minister of labour, social services and immigration.</p>
 	</div>
-
-
-	<div class="popup" >
-	<img src="img/bixi.jpg" />
-	<p>David is another political newcomer. She is a former Université de Montréal vice-rector and former associate deputy minister of education. She has a PhD in psychology from the university, where she began teaching in 1984. David is the sister of Québec Solidaire co-spokesperson Françoise David. She grew up in Outremont, the riding she represents in the National Assembly.</p>
-	</div>
-
-	<div class="popup" >
-	<img src="img/bagel.jpg" />
-	<p>A member of Philippe Couillard’s economic dream team, Leitao was chief economist at Laurentian Bank Securities prior to entering politics last month. </p>
-	<p>In 2008, Bloomberg ranked Leitao second among the world’s best economists as part of its annual review of economic forecasts for the U.S. economy. He has more than 30 years experience in the banking and financial fields. The Portuguese-born economist represents the Liberals in the West Island riding of Robert Baldwin. </p>
-	</div>
+	
 
 </div>
 
