@@ -4,7 +4,9 @@ This template creates a grid of thumbnails with on-hover captions. When you clic
 
 [See it in action here](http://www.montrealgazette.com/news/interactives/couillard-cabinet/index.html).
 
-Just add `img` tags with descriptive file names and the desired caption as the `title` attribute.
+Just add `img` tags with descriptive file names and the desired optional caption as the `title` attribute.
+
+Then add the associated popup content to the divs in the `#blurbs` section.
 
 The jQuery does most of the work of wrapping elements in their divs and pulling caption info from the file names.
 
@@ -35,6 +37,7 @@ In your body, create a `ul` with `id="tiles"` and add each `img` tag. These will
 * The optimal size is 185px x 185px, but this can be changed in the CSS.
 * The file name should be short with words separated by underscores. It will be the first part of the caption and also the `id` of its corresponding popup div.
 * The title should be a few words, and it will be the second part of the thumbnail caption.
+* If you don't want a two-part caption, omit the `title` attribute.
 
 Example:
 
@@ -58,6 +61,6 @@ Example:
 
 Make one of these popup divs for each of the thumbnails you created earlier. ** These divs must be in the same order as the thumbnails. Their id's will be the name of the thumbnail image files and this is how they'll be connected. **
 
-The jQuery script will also add the image file name as an `<h3>` element and the caption as `<h4>` below it.
+The jQuery script will also add the image file name as an `<h3>` element and the `title` caption as `<h4>` below it.
 
 That's all.
