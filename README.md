@@ -12,6 +12,7 @@ The jQuery does most of the work of wrapping elements in their divs and pulling 
 
 ##### Dependencies
 You'll need:
+
 1. jQuery
 
 2. [FancyBox](http://fancyapps.com/fancybox/)
